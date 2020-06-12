@@ -1,5 +1,7 @@
-import {GET_SMURFS, UPDATE_SMURFS, SET_ERROR} from '../actions/getSmurfs'
-import {POST_SMURF, ADD_SMURF} from '../actions/postSmurf'
+import {GET_SMURFS, UPDATE_SMURFS, SET_ERROR} from '../actions/getSmurfs';
+import {POST_SMURF, ADD_SMURF} from '../actions/postSmurf';
+import {DELETE_SMURF, REMOVE_SMURF} from '../actions/deleteSmurf';
+
 const initialState = {
     smurfs: [],
     isFetchingData: false,
@@ -30,6 +32,17 @@ export const reducer = (state = initialState, action)=>{
                 ...state,
                 isFetchingData: false,
                 smurfs: [...state.smurfs, action.payload]
+            }
+        case DELETE_SMURF:
+            return{
+                ...state,
+                isFetchingData: true
+            }
+        case REMOVE_SMURF:
+            return{
+                ...state,
+                isFetchingData: false,
+                smurfs: action.payload
             }
         case SET_ERROR:
             return{
