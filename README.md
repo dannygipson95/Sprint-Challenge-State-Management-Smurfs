@@ -23,10 +23,31 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+  The context API allows us to pass data from children to parent and also lets us pass data from a parent to a grandchild without passing unused props to the child component
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+  When triggered actions deliver data for state to the store
+
+  Reducers change the state according to the delivered action and payload and return it
+
+  The store is the external hub for state data that is accessed by components in order to freely move state data
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+  Application state is shared over many components throughout the app and should be used when information needs to be widespread, and available
+
+  Component state is local and only available to a component and its children if passed down via props. This should be used for small scale changes of state that are unimportant to other areas of the app
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+  redux-thunk allows us to call actions as functions that carry out asynchronous operations before carrying on to the synchronous operations
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+  I enjoyed the context API, because it was easier to comprehend, although I can see how redux would be more applicable
+
 
 ## Project Set Up
 
